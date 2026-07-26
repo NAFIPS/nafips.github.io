@@ -16,3 +16,6 @@ Thumbs.db
 
 # Project instructions — not part of the website
 /SPEC.md
+
+# Local tooling / session state
+/.claude/
