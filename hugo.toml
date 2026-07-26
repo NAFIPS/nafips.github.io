@@ -1,0 +1,81 @@
+# NAFIPS — North American Fuzzy Information Processing Society
+# Hugo site configuration.
+
+baseURL = "https://nafips.github.io/"
+# If a custom domain (e.g. nafips.org) is added later:
+#   1. change baseURL to "https://www.nafips.org/"
+#   2. add a file  static/CNAME  containing the single line:  www.nafips.org
+#   3. configure the domain's DNS + enable it in GitHub repo Settings → Pages.
+# (See CONTRIBUTING.md → "Custom domain".)
+
+locale = "en-us"
+title = "NAFIPS — North American Fuzzy Information Processing Society"
+
+enableRobotsTXT = true
+enableGitInfo = false
+
+# --- News archive pagination -------------------------------------------------
+[pagination]
+  pagerSize = 10
+
+# --- Taxonomies: a small society site needs none -----------------------------
+disableKinds = ["taxonomy", "term"]
+
+# --- Markup ------------------------------------------------------------------
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true            # allow inline HTML in Markdown content
+  [markup.highlight]
+    noClasses = false
+
+# --- RSS: full content in the news feed --------------------------------------
+[services]
+  [services.rss]
+    limit = 20
+
+# --- Site-wide parameters (edit these, never the HTML) -----------------------
+[params]
+  description = "NAFIPS — the North American Fuzzy Information Processing Society (est. 1981). Advancing research and education in fuzzy sets, fuzzy logic, and soft computing across North America."
+  tagline = "North American Fuzzy Information Processing Society · est. 1981"
+  mission = "NAFIPS advances the theory and application of fuzzy sets, fuzzy logic, and soft computing, connecting researchers, educators, and students across North America since 1981."
+  established = 1981
+  logo = "images/nafips_logo.png"
+  ogImage = "images/nafips_logo.png"
+  githubRepo = "https://github.com/NAFIPS/nafips.github.io"
+  # Number of recent news items shown on the home page.
+  homeNewsCount = 5
+
+# --- Main navigation (order = weight) ----------------------------------------
+[menu]
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+  [[menu.main]]
+    name = "Members"
+    pageRef = "/members"
+    weight = 20
+  [[menu.main]]
+    name = "Student Center"
+    pageRef = "/students"
+    weight = 30
+  [[menu.main]]
+    name = "Events"
+    pageRef = "/events"
+    weight = 40
+  [[menu.main]]
+    name = "Education"
+    pageRef = "/education"
+    weight = 50
+  [[menu.main]]
+    name = "Resources"
+    pageRef = "/resources"
+    weight = 60
+  [[menu.main]]
+    name = "News"
+    pageRef = "/news"
+    weight = 70
+  [[menu.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 80

@@ -1,0 +1,18 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Hugo modules (not used here, but ignore if added later)
+/.hugo_stats.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Project instructions — not part of the website
+/SPEC.md
