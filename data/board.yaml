@@ -1,0 +1,147 @@
+# =============================================================================
+# NAFIPS board & officers  →  rendered as cards on the About page.
+#
+# HOW TO EDIT: each person is one entry. Fields:
+#   name        (required)
+#   role        (required — their title, or "Represents: <organization>")
+#   term        (optional — e.g. "2024–2026")
+#   affiliation (optional — university / company)
+#   email       (optional — shown as a mailto link)
+# Groups render in the order listed here. To add a person, copy an entry.
+#
+# NOTE: affiliations are filled in only where confirmed. Blank ones are left
+# for officers to complete — see MIGRATION-NOTES.md.
+# =============================================================================
+
+groups:
+  - title: Officers
+    members:
+      - name: Lotfi A. Zadeh
+        role: Honorary President
+        affiliation: University of California, Berkeley
+      - name: Kelly Cohen
+        role: President
+        term: "2024–2026"
+        affiliation: University of Cincinnati
+        email: cohenky@ucmail.uc.edu
+      - name: Julia Taylor Rayz
+        role: President-Elect
+        term: "2024–2026"
+        affiliation: Purdue Polytechnic Institute
+        email: jtaylor1@purdue.edu
+      - name: Barnabas Bede
+        role: Past President
+        term: "2024–2026"
+        affiliation: DigiPen Institute of Technology
+        email: bbede@digipen.edu
+      - name: Christian Servin
+        role: Treasurer
+        term: "2016–2026"
+        affiliation: El Paso Community College
+        email: cservin@gmail.com
+      - name: Juan Carlos Figueroa García
+        role: Secretary
+        term: "2020–2026"
+        affiliation: Universidad Distrital Francisco José de Caldas
+        # email withheld — old-site value appeared corrupted; see MIGRATION-NOTES.md
+
+  - title: Board of Directors
+    members:
+      - name: Ildar Batyrshin
+        role: Director
+        term: "2017–2026"
+        email: batyr1@gmail.com
+      - name: Ricardo Coelho Silva
+        role: Director
+        term: "2017–2026"
+        email: rcoelhos@gmail.com
+      - name: Scott Dick
+        role: Director
+        term: "2024–2027"
+        affiliation: University of Alberta
+        email: sdick@ualberta.ca
+      - name: R. Baker Kearfott
+        role: Director
+        term: "2018–2027"
+        affiliation: University of Louisiana at Lafayette
+        email: rbk5287@louisiana.edu
+      - name: Olga Kosheleva
+        role: Director
+        term: "2019–2025"
+        affiliation: University of Texas at El Paso
+        email: olgak@utep.edu
+      - name: Pawan Lingras
+        role: Director
+        term: "2022–2025"
+        email: pawan.lingras@gmail.com
+      - name: Marina Mizukoshi
+        role: Director
+        term: "2020–2026"
+        email: tuyako@ufg.br
+      - name: Marek Z. Reformat
+        role: Director
+        term: "2018–2027"
+        affiliation: University of Alberta
+        email: reformat@ualberta.ca
+      - name: Shahnaz Shahbazova
+        role: Director
+        term: "2018–2027"
+        email: shahbazova@gmail.com
+
+  - title: Special Young Researcher Representatives
+    members:
+      - name: Christian Servin
+        role: Young Researcher Representative
+        term: "2017–2027"
+        affiliation: El Paso Community College
+        email: christians@utep.edu
+      - name: Tatiana Ringenberg
+        role: Young Researcher Representative
+        term: "2023–2026"
+        affiliation: Purdue Polytechnic Institute
+        email: ringenb@purdue.edu
+
+  - title: Special Representatives
+    members:
+      - name: Kelly Cohen
+        role: "Represents: Aeronautics & Astronautics community"
+        term: "2022–2025"
+        affiliation: University of Cincinnati
+        email: cohenky@ucmail.uc.edu
+      - name: Fernando Gomide
+        role: "Represents: Brazilian Fuzzy Systems Society"
+        term: "2017–2026"
+        affiliation: University of Campinas (UNICAMP)
+        email: gomide@dca.fee.unicamp.br
+      - name: Plamen Angelov
+        role: "Represents: EUSFLAT"
+        term: "2017–2026"
+        affiliation: Lancaster University
+        email: p.angelov@lancaster.ac.uk
+      - name: Oscar Castillo
+        role: "Represents: Hispanic American Fuzzy Systems Association"
+        term: "2017–2025"
+        affiliation: Tijuana Institute of Technology
+        email: ocastillo@tectijuana.mx
+      - name: Vladik Kreinovich
+        role: "Represents: IFSA"
+        term: "2017–2026"
+        affiliation: University of Texas at El Paso
+        email: vladik@utep.edu
+      - name: Nick Ernest
+        role: "Represents: Industry"
+        term: "2023–2026"
+        email: nick.ernest@us.thalesgroup.com
+      - name: Martine Ceberio
+        role: "Represents: Interval Computation community"
+        term: "2022–2025"
+        affiliation: University of Texas at El Paso
+        email: mceberio@utep.edu
+      - name: Ildar Batyrshin
+        role: "Represents: Mexican Society for Artificial Intelligence"
+        term: "2019–2025"
+        email: batyr1@gmail.com
+      - name: Timothy Arnett
+        role: "Represents: Student Competition Chair"
+        term: "2024–2027"
+        email: tim.arnett@psibernetix.com

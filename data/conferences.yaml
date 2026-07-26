@@ -1,0 +1,297 @@
+# =============================================================================
+# NAFIPS conference timeline  →  rendered automatically on the Events page.
+#
+# HOW TO ADD NEXT YEAR'S CONFERENCE: copy the top entry and edit the fields.
+# Fields:
+#   year      (required, number)
+#   name      (required)
+#   location  (required)
+#   dates     (required — human-readable, shown as-is)
+#   start     (optional ISO date YYYY-MM-DD — used only to mark it "upcoming"
+#              automatically once its start date is in the future)
+#   url       (optional — conference website; omit or "" if none / offline)
+#   logo      (optional — filename under assets/images/conf/)
+#   upcoming  (optional true/false — force the "upcoming" badge, e.g. for a
+#              placeholder with no start date yet)
+#   note      (optional — small italic note under the entry)
+#
+# Newest year first.
+# =============================================================================
+
+conferences:
+  - year: 2027
+    name: NAFIPS 2027
+    location: "To be announced"
+    dates: "Coming soon"
+    upcoming: true
+    note: "Host and dates to be confirmed."   # <!-- VERIFY -->
+
+  - year: 2026
+    name: NAFIPS 2026 — International Conference on Fuzzy Systems and Soft Computing
+    location: "El Paso, Texas, USA"
+    dates: "March 14–16, 2026"
+    start: 2026-03-14
+    url: "https://sites.google.com/view/nafips26/home"
+
+  - year: 2025
+    name: 2025 IFSA World Congress & NAFIPS Annual Meeting
+    location: "Banff, Alberta, Canada"
+    dates: "August 16–19, 2025"
+    start: 2025-08-16
+    url: "https://sites.ualberta.ca/~reformat/ifsa-nafips-25/index.html"
+    logo: "ifsa-logo.jpg"
+
+  - year: 2024
+    name: NAFIPS 2024 — Fuzzy Systems, Soft Computing & Explainable AI
+    location: "South Padre Island, Texas, USA"
+    dates: "May 27–29, 2024"
+    start: 2024-05-27
+    url: "https://nafips2024.digipen.edu/"
+
+  - year: 2023
+    name: NAFIPS 2023
+    location: "Cincinnati, Ohio, USA"
+    dates: "May 31 – June 3, 2023"
+    start: 2023-05-31
+
+  - year: 2022
+    name: NAFIPS 2022
+    location: "Halifax, Nova Scotia, Canada"
+    dates: "May 29 – June 2, 2022"
+    start: 2022-05-29
+
+  - year: 2021
+    name: NAFIPS 2021
+    location: "West Lafayette, Indiana, USA"
+    dates: "July 7–9, 2021"
+    start: 2021-07-07
+
+  - year: 2020
+    name: NAFIPS 2020
+    location: "Redmond, Washington, USA"
+    dates: "August 20–22, 2020"
+    start: 2020-08-20
+
+  - year: 2019
+    name: IFSA / NAFIPS 2019 — Joint World Congress
+    location: "Lafayette, Louisiana, USA"
+    dates: "June 18–22, 2019"
+    start: 2019-06-18
+
+  - year: 2018
+    name: NAFIPS / CBSF 2018
+    location: "Fortaleza, Brazil"
+    dates: "July 4–6, 2018"
+    start: 2018-07-04
+
+  - year: 2017
+    name: NAFIPS 2017
+    location: "Cancún, Mexico"
+    dates: "October 16–18, 2017"
+    start: 2017-10-16
+
+  - year: 2016
+    name: NAFIPS 2016
+    location: "El Paso, Texas, USA"
+    dates: "October 31 – November 2, 2016"
+    start: 2016-10-31
+
+  - year: 2015
+    name: NAFIPS 2015
+    location: "Redmond, Washington, USA"
+    dates: "August 17–19, 2015"
+    start: 2015-08-17
+
+  - year: 2014
+    name: 'NAFIPS 2014 — with IEEE "Norbert Wiener in the 21st Century"'
+    location: "Boston, Massachusetts, USA"
+    dates: "June 24–26, 2014"
+    start: 2014-06-24
+
+  - year: 2013
+    name: IFSA / NAFIPS 2013 — Joint World Congress
+    location: "Edmonton, Alberta, Canada"
+    dates: "June 24–28, 2013"
+    start: 2013-06-24
+
+  - year: 2012
+    name: NAFIPS 2012
+    location: "Berkeley, California, USA"
+    dates: "August 6–8, 2012"
+    start: 2012-08-06
+
+  - year: 2011
+    name: NAFIPS 2011
+    location: "El Paso, Texas, USA"
+    dates: "March 18–20, 2011"
+    start: 2011-03-18
+
+  - year: 2010
+    name: NAFIPS 2010
+    location: "Toronto, Ontario, Canada"
+    dates: "July 12–14, 2010"
+    start: 2010-07-12
+
+  - year: 2009
+    name: NAFIPS 2009
+    location: "Cincinnati, Ohio, USA"
+    dates: "June 14–17, 2009"
+    start: 2009-06-14
+
+  - year: 2008
+    name: NAFIPS 2008
+    location: "New York, New York, USA"
+    dates: "May 19–22, 2008"
+    start: 2008-05-19
+
+  - year: 2007
+    name: NAFIPS 2007
+    location: "San Diego, California, USA"
+    dates: "June 24–27, 2007"
+    start: 2007-06-24
+
+  - year: 2006
+    name: NAFIPS 2006
+    location: "Montréal, Quebec, Canada"
+    dates: "June 3–6, 2006"
+    start: 2006-06-03
+
+  - year: 2005
+    name: NAFIPS 2005
+    location: "Detroit, Michigan, USA"
+    dates: "June 26–28, 2005"
+    start: 2005-06-26
+    note: "Old-site records differ (Ann Arbor, June 22–25). Please verify."  # <!-- VERIFY -->
+
+  - year: 2004
+    name: NAFIPS 2004
+    location: "Banff, Alberta, Canada"
+    dates: "June 27–30, 2004"
+    start: 2004-06-27
+
+  - year: 2003
+    name: NAFIPS 2003
+    location: "Chicago, Illinois, USA"
+    dates: "July 24–26, 2003"
+    start: 2003-07-24
+
+  - year: 2002
+    name: NAFIPS – FLINT 2002
+    location: "New Orleans, Louisiana, USA"
+    dates: "June 27–29, 2002"
+    start: 2002-06-27
+
+  - year: 2001
+    name: IFSA / NAFIPS 2001 — Joint World Congress
+    location: "Vancouver, British Columbia, Canada"
+    dates: "July 25–28, 2001"
+    start: 2001-07-25
+
+  - year: 2000
+    name: "PeachFuzz 2000"
+    location: "Atlanta, Georgia, USA"
+    dates: "July 13–15, 2000"
+    start: 2000-07-13
+
+  - year: 1999
+    name: "NAFIPS 1999 — Real World Applications of Fuzzy Logic and Soft Computing"
+    location: "New York, New York, USA"
+    dates: "June 10–12, 1999"
+    start: 1999-06-10
+
+  - year: 1998
+    name: NAFIPS 1998
+    location: "Pensacola Beach, Florida, USA"
+    dates: "August 20–22, 1998"
+    start: 1998-08-20
+
+  - year: 1997
+    name: NAFIPS 1997
+    location: "Syracuse, New York, USA"
+    dates: "September 21–24, 1997"
+    start: 1997-09-21
+
+  - year: 1996
+    name: "NAFIPS 1996 — New Frontiers in Fuzzy Logic and Soft Computing"
+    location: "Berkeley, California, USA"
+    dates: "June 19–22, 1996"
+    start: 1996-06-19
+
+  - year: 1995
+    name: ISUMA – NAFIPS 1995
+    location: "College Park, Maryland, USA"
+    dates: "September 17–20, 1995"
+    start: 1995-09-17
+
+  - year: 1994
+    name: "NAFIPS 1994 — Joint Conference"
+    location: "San Antonio, Texas, USA"
+    dates: "September 18–21, 1994"
+    start: 1994-09-18
+
+  - year: 1993
+    name: "NAFIPS 1993 — The Growing Role of Fuzzy Logic"
+    location: "Allentown, Pennsylvania, USA"
+    dates: "August 22–25, 1993"
+    start: 1993-08-22
+
+  - year: 1992
+    name: "NAFIPS 1992 — Commercialization Through Fuzzification"
+    location: "Puerto Vallarta, Mexico"
+    dates: "December 15–17, 1992"
+    start: 1992-12-15
+
+  - year: 1991
+    name: "NAFIPS 1991 — A Decade of Growth"
+    location: "Columbia, Missouri, USA"
+    dates: "May 14–17, 1991"
+    start: 1991-05-14
+
+  - year: 1990
+    name: "NAFIPS 1990 — From Precision to Ambiguity"
+    location: "Toronto, Ontario, Canada"
+    dates: "June 6–8, 1990"
+    start: 1990-06-06
+
+  - year: 1989
+    name: IFSA 1989
+    location: "Seattle, Washington, USA"
+    dates: "August 6–11, 1989"
+    start: 1989-08-06
+
+  - year: 1988
+    name: NAFIPS 1988
+    location: "San Francisco, California, USA"
+    dates: "June 8–10, 1988"
+    start: 1988-06-08
+
+  - year: 1987
+    name: NAFIPS 1987
+    location: "West Lafayette, Indiana, USA"
+    dates: "May 5–7, 1987"
+    start: 1987-05-05
+
+  - year: 1986
+    name: "NAFIPS 1986 — Recent Developments in Fuzzy Set Theory"
+    location: "New Orleans, Louisiana, USA"
+    dates: "June 2–4, 1986"
+    start: 1986-06-02
+
+  - year: 1985
+    name: NAFIPS 1985 — Workshop on Fuzzy Expert Systems
+    location: "Atlanta, Georgia, USA"
+    dates: "October 24–25, 1985"
+    start: 1985-10-24
+
+  - year: 1983
+    name: NAFIPS-II
+    location: "Schenectady, New York, USA"
+    dates: "June 29 – July 1, 1983"
+    start: 1983-06-29
+
+  - year: 1982
+    name: NAFIPS-I — The First NAFIPS Meeting
+    location: "Logan, Utah, USA"
+    dates: "May 18–20, 1982"
+    start: 1982-05-18
+    note: "The founding meeting of NAFIPS."

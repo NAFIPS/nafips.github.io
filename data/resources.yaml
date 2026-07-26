@@ -1,0 +1,45 @@
+# =============================================================================
+# NAFIPS resources  →  rendered as grouped link lists on the Resources page.
+#
+# HOW TO EDIT: each category has a title, an optional intro, and a list of
+# links (each with title + url). Add a link by copying a "- title / url" pair.
+#
+# NOTE: the old site's resource list was ~20 years old and most links were
+# dead. The full original list is preserved in MIGRATION-NOTES.md for review;
+# the entries below point to the journals' and societies' current homepages.
+# =============================================================================
+
+categories:
+  - key: publications
+    title: Journals & Publications
+    intro: >-
+      Leading peer-reviewed venues for research in fuzzy sets, fuzzy logic,
+      approximate reasoning, and soft computing.
+    links:
+      - title: International Journal of Approximate Reasoning
+        url: https://www.sciencedirect.com/journal/international-journal-of-approximate-reasoning
+      - title: Fuzzy Sets and Systems
+        url: https://www.sciencedirect.com/journal/fuzzy-sets-and-systems
+      - title: IEEE Transactions on Fuzzy Systems
+        url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=91
+      - title: International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
+        url: https://www.worldscientific.com/worldscinet/ijufks
+      - title: Fuzzy Optimization and Decision Making
+        url: https://link.springer.com/journal/10700
+      - title: Granular Computing
+        url: https://link.springer.com/journal/41066
+
+  - key: societies
+    title: Related Societies & Communities
+    intro: >-
+      Sister organizations and international communities working in fuzzy
+      systems, computational intelligence, and soft computing.
+    links:
+      - title: European Society for Fuzzy Logic and Technology (EUSFLAT)
+        url: https://eusflat.org/
+      - title: IEEE Computational Intelligence Society
+        url: https://cis.ieee.org/
+      - title: NAFIPS mailing list (NAFIPS-L)
+        url: https://listserv.gsu.edu/cgi-bin/wa?SUBED1=NAFIPS-L&A=1
+      # TODO: add the International Fuzzy Systems Association (IFSA) — its
+      # canonical URL could not be verified automatically. See MIGRATION-NOTES.md.
