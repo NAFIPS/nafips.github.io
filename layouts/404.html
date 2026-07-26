@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="hero">
+  {{ partial "fuzzy-pattern.html" (dict "class" "hero__pattern") }}
+  <div class="container">
+    <div class="notfound">
+      <p class="notfound__code" style="color:#fff;">404</p>
+      <h1 style="color:#fff;">This page is a bit fuzzy</h1>
+      <p class="hero__mission" style="margin-inline:auto;">We couldn't find the page you were looking for. It may have moved, or the link may be out of date.</p>
+      <div class="hero__actions" style="justify-content:center;">
+        <a class="btn btn--primary" href="{{ "/" | relURL }}">Back to home</a>
+        <a class="btn btn--ghost" href="{{ "/news/" | relURL }}">Read the news</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

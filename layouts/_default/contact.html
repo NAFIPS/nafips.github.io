@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container container--narrow">
+    <div class="prose">{{ .Content }}</div>
+
+    {{ $officers := index (where hugo.Data.board.groups "title" "Officers") 0 }}
+    <div class="section-head" style="margin-top:2rem;">
+      <h2>Society officers</h2>
+      <p class="lead" style="font-size:1rem;">For most enquiries, the Secretary or President is the best first point of contact.</p>
+    </div>
+    <div class="people-grid">
+      {{ range $officers.members }}
+        {{ if .email }}{{ partial "person-card.html" . }}{{ end }}
+      {{ end }}
+    </div>
+
+    <div class="callout" style="margin-top:2.5rem;">
+      <h3>Join the mailing list</h3>
+      <p>Subscribe to <strong>NAFIPS-L</strong> to receive announcements about conferences, awards, and community news.</p>
+      <p><a class="btn btn--outline" href="https://listserv.gsu.edu/cgi-bin/wa?SUBED1=NAFIPS-L&amp;A=1" rel="noopener">Subscribe to NAFIPS-L <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </div>
+</section>
+{{ end }}

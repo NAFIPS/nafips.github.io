@@ -1,0 +1,21 @@
+{{- $c := .c -}}
+{{- $up := .upcoming -}}
+{{- $logo := "" -}}
+{{- with $c.logo -}}
+  {{- $src := resources.Get (printf "images/conf/%s" .) -}}
+  {{- with $src -}}{{- $logo = (.Fit "120x120 webp").RelPermalink -}}{{- end -}}
+{{- end -}}
+<li class="timeline__item{{ if $up }} timeline__item--upcoming{{ end }}">
+  <span class="timeline__marker" aria-hidden="true"></span>
+  <div class="timeline__card">
+    {{ if $logo }}<img class="timeline__logo" src="{{ $logo }}" alt="" width="60" height="60" loading="lazy">{{ end }}
+    <div>
+      <span class="timeline__year">{{ $c.year }}</span>{{ if $up }}<span class="timeline__tag timeline__tag--upcoming">Upcoming</span>{{ end }}
+      <p class="timeline__name">
+        {{ with $c.url }}<a href="{{ . }}" rel="noopener">{{ $c.name }}</a>{{ else }}{{ $c.name }}{{ end }}
+      </p>
+      <p class="timeline__meta"><span>{{ $c.location }}</span><span>{{ $c.dates }}</span></p>
+      {{ with $c.note }}<p class="timeline__meta" style="font-style:italic;margin-top:0.35rem;">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</li>

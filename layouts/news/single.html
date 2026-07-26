@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article>
+  <div class="page-header">
+    {{ partial "fuzzy-pattern.html" (dict "class" "page-header__pattern") }}
+    <div class="container container--narrow">
+      <span class="eyebrow">News</span>
+      <h1>{{ .Title }}</h1>
+      <p class="post-meta" style="color:rgba(255,255,255,0.85);margin:0.5rem 0 0;">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container container--narrow">
+      {{ with .Params.image }}
+        {{ $src := resources.Get (printf "images/news/%s" .) }}
+        {{ with $src }}
+          {{ $big := .Resize "900x webp q82" }}
+          <img class="post-hero-img" src="{{ $big.RelPermalink }}" alt="{{ $.Title }}" width="900" loading="eager">
+        {{ end }}
+      {{ end }}
+      <div class="prose">
+        {{ .Content }}
+        {{ with .Params.link }}
+        <p><a class="btn btn--outline" href="{{ . }}" rel="noopener">Visit the conference website <span aria-hidden="true">↗</span></a></p>
+        {{ end }}
+      </div>
+      <hr>
+      <p><a href="{{ "/news/" | relURL }}">← Back to all news</a></p>
+    </div>
+  </div>
+</article>
+{{ end }}

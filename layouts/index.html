@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $recent := where site.RegularPages "Section" "news" }}
+{{ $count := site.Params.homeNewsCount | default 5 }}
+
+<section class="hero">
+  {{ partial "fuzzy-pattern.html" (dict "class" "hero__pattern") }}
+  <div class="container">
+    <div class="hero__inner">
+      <img class="hero__logo" src="{{ "images/nafips_logo.png" | relURL }}" alt="NAFIPS" width="1025" height="278">
+      <h1>North American Fuzzy Information&nbsp;Processing Society</h1>
+      <p class="hero__tagline">{{ site.Params.tagline }}</p>
+      <p class="hero__mission">{{ site.Params.mission }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ "/about/" | relURL }}">Read more <span aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="{{ "/events/" | relURL }}">Upcoming events</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;">
+      <div>
+        <span class="eyebrow">Latest news</span>
+        <h2>News &amp; announcements</h2>
+      </div>
+      <a class="section-head__link" href="{{ "/news/" | relURL }}">All news <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="grid grid--news">
+      {{ range first $count $recent }}
+        {{ partial "news-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Explore the society</span>
+      <h2>Where to go next</h2>
+    </div>
+    <div class="grid">
+      {{ $cards := slice
+        (dict "title" "About NAFIPS" "url" "/about/" "desc" "Mission, history, board of officers, and bylaws." "icon" "info")
+        (dict "title" "Members" "url" "/members/" "desc" "How to join the society and subscribe to the mailing list." "icon" "users")
+        (dict "title" "Student Center" "url" "/students/" "desc" "Student paper awards, the fuzzy competition, and opportunities." "icon" "cap")
+        (dict "title" "Events" "url" "/events/" "desc" "The NAFIPS conference timeline — past meetings and what's next." "icon" "calendar")
+        (dict "title" "Education Center" "url" "/education/" "desc" "Tutorials, journals, and learning materials on fuzzy systems." "icon" "book")
+        (dict "title" "Resources" "url" "/resources/" "desc" "Publications, research groups, software, and web links." "icon" "link")
+      }}
+      {{ range $cards }}
+      <a class="card section-card" href="{{ .url | relURL }}">
+        <span class="section-card__icon">{{ partial "icon.html" .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .desc }}</p>
+        <span class="section-card__arrow">Learn more <span aria-hidden="true">→</span></span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

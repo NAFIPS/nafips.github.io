@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container">
+    {{ with .Content }}<div class="prose container--narrow" style="padding-inline:0;margin-bottom:2rem;">{{ . }}</div>{{ end }}
+    {{ range hugo.Data.resources.categories }}
+    <div class="section-head" style="margin-top:2.5rem;">
+      <h2>{{ .title }}</h2>
+      {{ with .intro }}<p class="lead" style="font-size:1rem;">{{ . }}</p>{{ end }}
+    </div>
+    <div class="grid">
+      {{ range .links }}
+      <a class="card section-card" href="{{ .url }}" rel="noopener">
+        <span class="section-card__icon">{{ partial "icon.html" "external" }}</span>
+        <h3 style="font-size:1.05rem;">{{ .title }}</h3>
+        <span class="section-card__arrow">Visit <span aria-hidden="true">↗</span></span>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,19 @@
+{{- /* News card. Context: a news page. */ -}}
+{{- $img := "" -}}
+{{- with .Params.image -}}
+  {{- $src := resources.Get (printf "images/news/%s" .) -}}
+  {{- with $src -}}{{- $img = (.Resize "640x webp q82").RelPermalink -}}{{- end -}}
+{{- end -}}
+<article class="card news-card">
+  {{ if $img }}
+  <a class="news-card__media" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ $img }}" alt="" width="640" loading="lazy" decoding="async">
+  </a>
+  {{ end }}
+  <div class="news-card__body">
+    <span class="date-badge">{{ .Date.Format "Jan 2, 2006" }}</span>
+    <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="news-card__excerpt">{{ .Summary | plainify | truncate 130 }}</p>
+    <a class="news-card__more" href="{{ .RelPermalink }}">Read more <span aria-hidden="true">→</span></a>
+  </div>
+</article>

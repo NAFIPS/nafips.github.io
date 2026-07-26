@@ -1,0 +1,9 @@
+{{- /* Banner for interior pages. Pass the page as context. */ -}}
+<div class="page-header">
+  {{ partial "fuzzy-pattern.html" (dict "class" "page-header__pattern") }}
+  <div class="container">
+    {{ with .Params.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p>{{ . }}</p>{{ end }}
+  </div>
+</div>

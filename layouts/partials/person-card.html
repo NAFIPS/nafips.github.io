@@ -1,0 +1,13 @@
+{{- /* Officer card with initials-avatar fallback. Context: a person map. */ -}}
+{{- $initials := "" -}}
+{{- range (split .name " ") -}}{{- if and . (gt (len .) 0) -}}{{- $initials = printf "%s%s" $initials (substr . 0 1) -}}{{- end -}}{{- end -}}
+{{- $initials = upper (substr $initials 0 2) -}}
+<div class="person">
+  <span class="person__avatar" aria-hidden="true">{{ $initials }}</span>
+  <div>
+    <p class="person__name">{{ .name }}</p>
+    <p class="person__role">{{ .role }}{{ with .term }} · {{ . }}{{ end }}</p>
+    {{ with .affiliation }}<p class="person__aff">{{ . }}</p>{{ end }}
+    {{ with .email }}<p class="person__email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{{- /*
+  Thematic background: overlapping fuzzy membership functions
+  (triangular, trapezoidal, and Gaussian) drawn along a shared axis —
+  the visual language of fuzzy set theory. Pure inline SVG, no images.
+  Accepts an optional `class` via dict: {{ partial "fuzzy-pattern.html" (dict "class" "hero__pattern") }}
+*/ -}}
+{{- $class := .class | default "hero__pattern" -}}
+<svg class="{{ $class }}" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice"
+     aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fzFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.35">
+    <!-- Gaussian membership functions -->
+    <path d="M-40,360 C 120,360 160,60 320,60 C 480,60 520,360 680,360"/>
+    <path d="M300,360 C 460,360 500,110 660,110 C 820,110 860,360 1020,360"/>
+    <path d="M660,360 C 800,360 840,150 980,150 C 1120,150 1160,360 1300,360"/>
+    <!-- Triangular membership function -->
+    <path d="M40,360 L 220,150 L 400,360" stroke-opacity="0.28"/>
+    <!-- Trapezoidal membership function -->
+    <path d="M540,360 L 640,120 L 820,120 L 920,360" stroke-opacity="0.28"/>
+  </g>
+  <!-- soft fills under two curves -->
+  <path d="M-40,360 C 120,360 160,60 320,60 C 480,60 520,360 680,360 Z" fill="url(#fzFade)"/>
+  <path d="M540,360 L 640,120 L 820,120 L 920,360 Z" fill="url(#fzFade)"/>
+  <!-- peak markers -->
+  <g fill="#ffffff" fill-opacity="0.5">
+    <circle cx="320" cy="60" r="4"/>
+    <circle cx="660" cy="110" r="4"/>
+    <circle cx="980" cy="150" r="4"/>
+    <circle cx="220" cy="150" r="3"/>
+  </g>
+  <!-- baseline axis -->
+  <line x1="0" y1="360" x2="1200" y2="360" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5"/>
+</svg>

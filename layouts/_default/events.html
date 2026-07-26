@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container">
+    {{ with .Content }}<div class="prose container--narrow" style="padding-inline:0;margin-bottom:1rem;">{{ . }}</div>{{ end }}
+
+    {{ $now := now }}
+    {{ $confs := hugo.Data.conferences.conferences }}
+
+    {{/* Split upcoming vs past */}}
+    {{ $upcoming := slice }}
+    {{ $past := slice }}
+    {{ range $confs }}
+      {{ $isUp := .upcoming }}
+      {{ if and (not $isUp) .start }}{{ if ge (.start) $now }}{{ $isUp = true }}{{ end }}{{ end }}
+      {{ if $isUp }}{{ $upcoming = $upcoming | append . }}{{ else }}{{ $past = $past | append . }}{{ end }}
+    {{ end }}
+
+    {{ if $upcoming }}
+    <div class="section-head" style="margin-top:1rem;">
+      <span class="eyebrow">On the horizon</span>
+      <h2>Upcoming conferences</h2>
+    </div>
+    <ul class="timeline">
+      {{ range $upcoming }}{{ partial "timeline-item.html" (dict "c" . "upcoming" true) }}{{ end }}
+    </ul>
+    {{ end }}
+
+    <div class="section-head" style="margin-top:2.5rem;">
+      <span class="eyebrow">Since 1982</span>
+      <h2>Conference history</h2>
+      <p class="lead" style="font-size:1rem;">Every NAFIPS annual meeting and joint world congress, most recent first.</p>
+    </div>
+    <ul class="timeline">
+      {{ range $past }}{{ partial "timeline-item.html" (dict "c" . "upcoming" false) }}{{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

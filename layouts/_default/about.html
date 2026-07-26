@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container container--narrow">
+    <div class="prose">{{ .Content }}</div>
+  </div>
+</section>
+
+<section class="section section--tint" id="board">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Leadership</span>
+      <h2>Board &amp; officers</h2>
+      <p class="lead" style="font-size:1rem;">The volunteers who guide the society.</p>
+    </div>
+    {{ range hugo.Data.board.groups }}
+      <h3 style="margin-top:2rem;">{{ .title }}</h3>
+      <div class="people-grid">
+        {{ range .members }}{{ partial "person-card.html" . }}{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

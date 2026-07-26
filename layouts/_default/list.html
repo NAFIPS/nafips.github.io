@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container container--narrow">
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    {{ with .Pages }}
+    <ul class="news-list" style="margin-top:1.5rem;">
+      {{ range . }}
+      <li class="news-list__item">
+        <div class="news-list__date">
+          <span class="day">{{ .Date.Format "2" }}</span>
+          <span class="my">{{ .Date.Format "Jan 2006" }}</span>
+        </div>
+        <div>
+          <h3 class="news-list__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="news-list__excerpt">{{ .Summary | plainify | truncate 160 }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

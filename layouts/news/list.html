@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container container--narrow">
+    {{ with .Content }}<div class="prose" style="margin-bottom:2rem;">{{ . }}</div>{{ end }}
+
+    {{ $paginator := .Paginate .Pages }}
+    {{ $lastYear := "" }}
+    <div class="news-list">
+      {{ range $paginator.Pages }}
+        {{ $year := .Date.Format "2006" }}
+        {{ if ne $year $lastYear }}
+          {{ $lastYear = $year }}
+          <h2 class="year-heading" id="y{{ $year }}">{{ $year }}</h2>
+        {{ end }}
+        <article class="news-list__item">
+          <div class="news-list__date">
+            <span class="day">{{ .Date.Format "Jan 2" }}</span>
+            <span class="my">{{ .Date.Format "2006" }}</span>
+          </div>
+          <div>
+            <h3 class="news-list__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="news-list__excerpt">{{ .Summary | plainify | truncate 170 }}</p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination" aria-label="News pages">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" rel="prev" aria-label="Previous page">←</a>
+      {{ else }}<span class="disabled"><span>←</span></span>{{ end }}
+      {{ range $paginator.Pagers }}
+        {{ if eq . $paginator }}
+          <span class="active"><span aria-current="page">{{ .PageNumber }}</span></span>
+        {{ else }}
+          <a href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ end }}
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" rel="next" aria-label="Next page">→</a>
+      {{ else }}<span class="disabled"><span>→</span></span>{{ end }}
+    </nav>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

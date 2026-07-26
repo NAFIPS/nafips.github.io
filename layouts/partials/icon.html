@@ -1,0 +1,19 @@
+{{- /* Inline stroke icons (24x24). Context: icon name string. */ -}}
+{{- $c := `stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"` -}}
+{{- if eq . "info" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" {{ $c | safeHTMLAttr }}/><path d="M12 11v5M12 8h.01" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "users" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M9 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM22 19v-1a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "cap" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5zM6 11v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5M22 9v5" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "calendar" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2" {{ $c | safeHTMLAttr }}/><path d="M3 9h18M8 3v3M16 3v3" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "book" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v18H6.5A2.5 2.5 0 0 0 4 22.5V4.5zM20 16H6.5A2.5 2.5 0 0 0 4 18.5" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "link" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "mail" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" {{ $c | safeHTMLAttr }}/><path d="m3 7 9 6 9-6" {{ $c | safeHTMLAttr }}/></svg>
+{{- else if eq . "external" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" {{ $c | safeHTMLAttr }}/></svg>
+{{- end -}}

@@ -1,0 +1,43 @@
+{{- $title := .Title -}}
+{{- $isHome := .IsHome -}}
+{{- $pageTitle := cond $isHome site.Title (printf "%s · NAFIPS" .Title) -}}
+{{- $desc := "" -}}
+{{- with .Description }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = (. | plainify | truncate 160) }}{{ else }}{{ $desc = site.Params.description }}{{ end }}{{ end -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $pageTitle }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Open Graph / Twitter */ -}}
+{{ $ogImage := "images/nafips_logo.png" | absURL }}
+<meta property="og:site_name" content="NAFIPS">
+<meta property="og:title" content="{{ cond $isHome "NAFIPS — North American Fuzzy Information Processing Society" .Title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ cond $isHome "NAFIPS" .Title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+
+{{- /* Favicons */ -}}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+<link rel="icon" type="image/png" href="{{ "images/favicon-32.png" | relURL }}" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | relURL }}">
+<meta name="theme-color" content="#1a3a6b">
+
+{{- /* Stylesheet: fingerprinted + minified */ -}}
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{- /* RSS autodiscovery */ -}}
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="NAFIPS News" href="{{ .Permalink }}">{{ end }}
+{{ range .AlternativeOutputFormats }}<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="NAFIPS News">{{ end }}
+
+{{- /* JSON-LD organization schema (home only) */ -}}
+{{ if $isHome }}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"North American Fuzzy Information Processing Society","alternateName":"NAFIPS","url":"{{ site.BaseURL }}","foundingDate":"1981","description":"{{ site.Params.description }}","logo":"{{ $ogImage }}"}
+</script>
+{{ end }}
