@@ -57,9 +57,8 @@ _Generated during the initial rebuild. Source: the old site at
   presidency has rotated: **Julia Taylor Rayz** is now President, **Nick Ernest**
   (Thales Avionics Group) is President‑Elect, and **Kelly Cohen** is Past
   President. Barnabas Bede (previously Past President) has therefore rolled off
-  the Officers list. Julia Rayz's and Nick Ernest's terms are set to **2026–2028**
-  (confirmed); **Kelly Cohen's Past‑President term is not yet set** — please add it
-  when confirmed.
+  the Officers list. Terms are confirmed: Julia Rayz (President) and Nick Ernest
+  (President‑Elect) **2026–2028**, Kelly Cohen (Past President) **2024–2026**.
 - **Lotfi A. Zadeh** is listed as *Honorary President* exactly as on the old
   site. (Prof. Zadeh, the founder of fuzzy set theory, passed away in 2017; the
   Society lists him honorarily.) Remove or adjust if you prefer.
