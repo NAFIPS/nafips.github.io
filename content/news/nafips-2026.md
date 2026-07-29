@@ -1,6 +1,7 @@
 ---
 title: "NAFIPS 2026 — El Paso, Texas"
 date: 2026-03-16
+image: "nafips-2026.png"
 link: "https://sites.google.com/view/nafips26/home"
 description: "The NAFIPS 2026 conference on fuzzy systems and soft computing, hosted in El Paso, Texas."
 ---

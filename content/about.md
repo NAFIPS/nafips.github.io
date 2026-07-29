@@ -60,6 +60,7 @@ The **K.S. Fu Award** is NAFIPS's highest honor, recognizing outstanding lifetim
 
 | Year | Recipient(s) |
 |------|--------------|
+| 2026 | Kelly Cohen |
 | 2024 | Scott Dick |
 | 2023 | Martine Ceberio · William Melek |
 | 2022 | Piero Bonissone · Patricia Melin · Vladik Kreinovich |
