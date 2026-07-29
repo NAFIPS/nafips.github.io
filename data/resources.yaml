@@ -29,6 +29,15 @@ categories:
       - title: Granular Computing
         url: https://link.springer.com/journal/41066
 
+  - key: toolkits
+    title: Toolkits & Software
+    intro: >-
+      Tools and libraries for building and deploying fuzzy and explainable AI
+      systems in research and practice.
+    links:
+      - title: Thales AI Toolkit for civil and military critical decisions
+        url: https://www.thalesgroup.com/en/solutions-catalogue/ai-toolkit-civil-and-military-critical-decisions
+
   - key: societies
     title: Related Societies & Communities
     intro: >-

@@ -23,11 +23,15 @@ maintenance, and the evaluation of language models using fuzzy theory. See the
 
 ## The fuzzy competition
 
-NAFIPS conferences host a student **competition** that challenges teams to apply
-fuzzy logic and soft computing to real-world problems. It is a great way to gain
-hands-on experience, collaborate with peers, and have your work seen by leaders
-in the field. Details are announced with each conference — watch the
-[Events page](/events/) and the mailing list.
+The student **fuzzy competition** was held for the first time at **NAFIPS 2026**
+in El Paso, challenging teams to apply fuzzy logic and soft computing to
+real-world problems. It has since grown into the **Explainable Fuzzy Challenge
+(XFC 2026)** — an annual competition run by Thales.
+
+Taking part is a great way to gain hands-on experience, collaborate with peers,
+and have your work seen by leaders in the field. Learn more at the
+[XFC competition site](https://xfuzzycomp.github.io/XFC/), and watch the
+[Events page](/events/) and the mailing list for each year's details.
 
 ## Representation & mentorship
 

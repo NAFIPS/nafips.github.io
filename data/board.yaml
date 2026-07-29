@@ -19,21 +19,18 @@ groups:
       - name: Lotfi A. Zadeh
         role: Honorary President
         affiliation: University of California, Berkeley
-      - name: Kelly Cohen
-        role: President
-        term: "2024–2026"
-        affiliation: University of Cincinnati
-        email: cohenky@ucmail.uc.edu
       - name: Julia Taylor Rayz
-        role: President-Elect
-        term: "2024–2026"
+        role: President
         affiliation: Purdue Polytechnic Institute
         email: jtaylor1@purdue.edu
-      - name: Barnabas Bede
+      - name: Nick Ernest
+        role: President-Elect
+        affiliation: Thales Avionics Group
+        email: nick.ernest@us.thalesgroup.com
+      - name: Kelly Cohen
         role: Past President
-        term: "2024–2026"
-        affiliation: DigiPen Institute of Technology
-        email: bbede@digipen.edu
+        affiliation: University of Cincinnati
+        email: cohenky@ucmail.uc.edu
       - name: Christian Servin
         role: Treasurer
         term: "2016–2026"
