@@ -48,6 +48,10 @@ disableKinds = ["taxonomy", "term"]
 # --- Main navigation (order = weight) ----------------------------------------
 [menu]
   [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 5
+  [[menu.main]]
     name = "About"
     pageRef = "/about"
     weight = 10

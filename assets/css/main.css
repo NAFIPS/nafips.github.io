@@ -705,7 +705,7 @@ main { flex: 1 0 auto; }
 }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 460px) { .footer-grid { grid-template-columns: 1fr; } }
-.footer-brand img { height: 34px; filter: brightness(0) invert(1); opacity: 0.95; margin-bottom: 0.75rem; }
+.footer-brand img { height: 34px; width: auto; filter: brightness(0) invert(1); opacity: 0.95; margin-bottom: 0.75rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.65); max-width: 32ch; }
 .footer-col h4 { color: #fff; font-family: var(--font-sans); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; }
