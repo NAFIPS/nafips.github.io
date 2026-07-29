@@ -21,10 +21,12 @@ groups:
         affiliation: University of California, Berkeley
       - name: Julia Taylor Rayz
         role: President
+        term: "2026–2028"
         affiliation: Purdue Polytechnic Institute
         email: jtaylor1@purdue.edu
       - name: Nick Ernest
         role: President-Elect
+        term: "2026–2028"
         affiliation: Thales Avionics Group
         email: nick.ernest@us.thalesgroup.com
       - name: Kelly Cohen
