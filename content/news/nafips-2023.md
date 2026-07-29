@@ -1,6 +1,6 @@
 ---
 title: "NAFIPS 2023 — Cincinnati, Ohio"
-date: 2024-04-19T09:00:00
+date: 2023-05-31
 description: "The NAFIPS 2023 conference was held at the University of Cincinnati."
 ---
 

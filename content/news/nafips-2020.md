@@ -1,6 +1,6 @@
 ---
 title: "NAFIPS 2020 — Redmond, Washington"
-date: 2021-08-27T10:00:00
+date: 2020-08-20
 description: "The NAFIPS 2020 conference was held in Redmond, Washington."
 ---
 

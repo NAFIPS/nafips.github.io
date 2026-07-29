@@ -1,6 +1,6 @@
 ---
 title: "IFSA / NAFIPS 2025 held in Banff, Canada"
-date: 2025-08-19
+date: 2025-08-16
 image: "ifsa-nafips-2025.png"
 link: "https://sites.ualberta.ca/~reformat/ifsa-nafips-25/index.html"
 description: "The 2025 IFSA World Congress and NAFIPS Annual Meeting took place August 16–19, 2025 in Banff, Alberta."

@@ -1,6 +1,6 @@
 ---
 title: "NAFIPS 2024 — South Padre Island, Texas"
-date: 2024-04-19T12:00:00
+date: 2024-05-27
 image: "nafips-2024.png"
 link: "https://nafips2024.digipen.edu/"
 description: "The NAFIPS 2024 International Conference on Fuzzy Systems, Soft Computing, and Explainable AI."

@@ -1,6 +1,6 @@
 ---
 title: "FUZZ-IEEE 2024 at IEEE WCCI — Yokohama, Japan"
-date: 2024-04-19T11:00:00
+date: 2024-06-30
 image: "wcci-2024.png"
 link: "https://2024.ieeewcci.org/"
 description: "FUZZ-IEEE 2024 takes place within the IEEE World Congress on Computational Intelligence."
