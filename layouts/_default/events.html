@@ -12,7 +12,8 @@
     {{ $past := slice }}
     {{ range $confs }}
       {{ $isUp := .upcoming }}
-      {{ if and (not $isUp) .start }}{{ if ge (.start) $now }}{{ $isUp = true }}{{ end }}{{ end }}
+      {{/* .start comes out of YAML as a string — parse it before comparing */}}
+      {{ if and (not $isUp) .start }}{{ if ge (time.AsTime .start) $now }}{{ $isUp = true }}{{ end }}{{ end }}
       {{ if $isUp }}{{ $upcoming = $upcoming | append . }}{{ else }}{{ $past = $past | append . }}{{ end }}
     {{ end }}
 

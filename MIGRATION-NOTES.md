@@ -38,8 +38,8 @@ _Generated during the initial rebuild. Source: the old site at
 
 ## 3. Things to fill in / verify (marked `<!-- VERIFY -->` in the data files)
 
-- **NAFIPS 2027** — placeholder only, in `data/conferences.yaml`. Add host,
-  city, and dates when known.
+- **NAFIPS 2028** — city (West Lafayette, IN) and month (June 2028) are set in
+  `data/conferences.yaml`; exact dates still to be announced.
 - **NAFIPS 2026 details** — location (El Paso, TX) and dates (March 14–16, 2026)
   are confirmed from the official Google Site. **Submission deadlines were NOT on
   that site's home page** (they live on a `/submission` subpage that wasn't

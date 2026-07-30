@@ -19,12 +19,18 @@
 # =============================================================================
 
 conferences:
+  - year: 2028
+    name: NAFIPS 2028
+    location: "West Lafayette, Indiana, USA"
+    dates: "June 2028"
+    upcoming: true
+    note: "Exact dates to be announced."
+
   - year: 2027
     name: NAFIPS 2027
-    location: "To be announced"
-    dates: "Coming soon"
-    upcoming: true
-    note: "Host and dates to be confirmed."   # <!-- VERIFY -->
+    location: "Ilhéus, Brazil"
+    dates: "August 1–4, 2027"
+    start: 2027-08-01
 
   - year: 2026
     name: NAFIPS 2026 — International Conference on Fuzzy Systems and Soft Computing
